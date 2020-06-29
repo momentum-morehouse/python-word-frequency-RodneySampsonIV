@@ -30,7 +30,7 @@ def print_word_freq(file):
             for word in words:
                 if word in d:
                     d[word] = d[word] + 1
-                else:
+                elif not word in STOP_WORDS:
                     d[word] = 1
         for key in list(d.keys()):
             print(key,":", d[key])
