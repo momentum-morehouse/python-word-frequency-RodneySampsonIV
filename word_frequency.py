@@ -33,7 +33,9 @@ def print_word_freq(file):
                 elif not word in STOP_WORDS:
                     d[word] = 1
         for key in list(d.keys()):
-            print(key,":", d[key])
+			for _ in range(d[key]):
+				print("*")
+       		print(key,":", d[key])
                 #word_list[word] = word.get(word, 0) + 1
 
     #print('/n.join' (['%s,%s' % (k, v)]))
